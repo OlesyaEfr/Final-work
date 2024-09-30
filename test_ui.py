@@ -41,7 +41,7 @@ def test_buy_book(driver):
     driver.find_element(By.CLASS_NAME, "header-search__button-icon").click()
 
     sleep(3)
-    driver.find_element(By.XPATH, "/html[1]/body[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/section[1]/section[1]/div[1]/article[1]/a[1]/picture[1]/img[1]").click()
+    driver.find_element(By.CSS_SELECTOR, "img[alt='Букварь: Учебное пособие.']").click()
     sleep(3)
     # Ожидание загрузки элемента 
     element = WebDriverWait(driver, 10).until( EC.presence_of_element_located((By.XPATH, '/html[1]/body[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/section[1]/section[1]/div[1]/article[1]/div[3]/div[1]')) )
@@ -51,20 +51,20 @@ def test_buy_book(driver):
     ActionChains(driver).move_to_element(element).click(element).perform()
     sleep(3)
 
-def test_buy_book_verify(driver):
-    driver.get('https://www.chitai-gorod.ru')
-    driver.find_element(By.CLASS_NAME, "header-search__input").send_keys('букварь учебное пособие. надежда жукова')
-    driver.find_element(By.CLASS_NAME, "header-search__button-icon").click()
+#def test_buy_book_verify(driver):
+    #driver.get('https://www.chitai-gorod.ru')
+    #driver.find_element(By.CLASS_NAME, "header-search__input").send_keys('букварь учебное пособие. надежда жукова')
+    #driver.find_element(By.CLASS_NAME, "header-search__button-icon").click()
 
-    sleep(3)
-    driver.find_element(By.XPATH, "/html[1]/body[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/section[1]/section[1]/div[1]/article[1]/a[1]/picture[1]/img[1]").click()
-    sleep(3)
+    #sleep(3)
+    #driver.find_element(By.XPATH, "/html[1]/body[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/section[1]/section[1]/div[1]/article[1]/a[1]/picture[1]/img[1]").click()
+    #sleep(3)
     # Ожидание загрузки элемента 
-    element = WebDriverWait(driver, 10).until( EC.presence_of_element_located((By.XPATH, '/html[1]/body[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/section[1]/section[1]/div[1]/article[1]/div[3]/div[1]')) )
+    #element = WebDriverWait(driver, 10).until( EC.presence_of_element_located((By.XPATH, '/html[1]/body[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/section[1]/section[1]/div[1]/article[1]/div[3]/div[1]')) )
     # Скролл к элементу
-    driver.execute_script("arguments[0].scrollIntoView(true);", element)
+    #driver.execute_script("arguments[0].scrollIntoView(true);", element)
     # Клик по элементу 
-    ActionChains(driver).move_to_element(element).click(element).perform()
+    #ActionChains(driver).move_to_element(element).click(element).perform()
 
     sleep(3)
 

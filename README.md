@@ -38,4 +38,5 @@
 4. Сгенерировать отчет 'allure generate allure-files -o allure-report'
 5. Открыть отчет 'allure open allure-report'
 
-
+### Ссылка на финальный проект по ручному тестированию
+https://atom-vulture-1e9.notion.site/3edc2ae098314cc783137f3df2df76b8

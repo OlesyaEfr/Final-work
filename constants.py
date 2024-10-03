@@ -1,0 +1,1 @@
+Base_url = "https://web-gate.chitai-gorod.ru"

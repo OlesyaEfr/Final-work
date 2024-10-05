@@ -2,12 +2,13 @@ import allure
 import requests
 import json
 import pytest
-from constants import Base_url
+from constants import Base_url, Token
 
-token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3VzZXItcmlnaHQiLCJzdWIiOjIwMTA0MDc1LCJpYXQiOjE3Mjc5NzUxMzEsImV4cCI6MTcyNzk3ODczMSwidHlwZSI6MjB9.xfQLaEucE3GhG4P_sWmQlxetqdwaiaMz07IXqevs6rw"
+token = Token
 headers = {"authorization": f"Bearer {token}"}
 url = Base_url
 
+@pytest.mark.api
 @allure.epic("Читай-город") 
 @allure.severity("critical")
 @allure.title("Поиск товара")
@@ -20,6 +21,7 @@ def test_search_string():
         assert response.status_code == 200
         assert response.headers["Content-Type"] == "application/json"
 
+@pytest.mark.api
 @allure.epic("Читай-город") 
 @allure.severity("critical")
 @allure.title("Поиск товара")
@@ -32,7 +34,8 @@ def test_sale_categories():
     with allure.step("Проверка резульата"):
         assert response.status_code == 200
         assert len(body) > 0
-    
+
+@pytest.mark.api    
 @allure.epic("Читай-город") 
 @allure.severity("critical")
 @allure.title("Поиск товара")
@@ -45,6 +48,7 @@ def test_search_catalog():
         assert response.status_code == 200
         assert response.headers["Content-Type"] == "application/json"
 
+@pytest.mark.api
 @allure.epic("Читай-город") 
 @allure.severity("critical")
 @allure.title("Поиск товара")
@@ -57,6 +61,7 @@ def test_negative_search_string():
         assert response.status_code == 422
         assert response.is_redirect == False
 
+@pytest.mark.api
 @allure.epic("Читай-город") 
 @allure.severity("critical")
 @allure.title("Поиск товара")

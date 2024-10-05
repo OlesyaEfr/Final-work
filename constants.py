@@ -1,1 +1,2 @@
 Base_url = "https://web-gate.chitai-gorod.ru"
+Token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3VzZXItcmlnaHQiLCJzdWIiOjIwMTA0MDc1LCJpYXQiOjE3MjgxNTE0NTEsImV4cCI6MTcyODE1NTA1MSwidHlwZSI6MjB9.UdMW2CFW67Ayy4hkQTkudPiCdINi5kgyG3rRWQ9grfE"

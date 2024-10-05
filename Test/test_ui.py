@@ -12,6 +12,7 @@ from Pages.ui_class import MainPage
 
 main_page = MainPage
 
+@pytest.mark.ui
 @allure.epic("Читай-город") 
 @allure.severity("critical")
 @allure.title("Поиск товаров")
@@ -25,6 +26,7 @@ def test_valid_search(driver):
     with allure.step("Нажимаем на кнопку поиска"):
         driver.find_element(By.CLASS_NAME, "header-search__button-icon").click()
 
+@pytest.mark.ui
 @allure.epic("Читай-город") 
 @allure.severity("critical")
 @allure.title("Поиск товаров")
@@ -45,6 +47,7 @@ def test_add_in_bookmarks(driver):
     with allure.step("Клик по элементу"):
         ActionChains(driver).move_to_element(element).click(element).perform()
 
+@pytest.mark.ui
 @allure.epic("Читай-город") 
 @allure.severity("critical")
 @allure.title("Поиск товаров")
@@ -65,6 +68,7 @@ def test_buy_book(driver):
     with allure.step("Клик по элементу"):
         ActionChains(driver).move_to_element(element).click(element).perform()
 
+@pytest.mark.ui
 @allure.epic("Читай-город") 
 @allure.severity("critical")
 @allure.title("Кликабельность кнопки")
@@ -76,6 +80,7 @@ def test_cart(driver):
     with allure.step("Переход в корзину"):
         driver.find_element(By.CSS_SELECTOR, ".header-cart.sticky-header__controls-item").click()
 
+@pytest.mark.ui
 @allure.epic("Читай-город") 
 @allure.severity("critical")
 @allure.title("Кликабельность кнопки")

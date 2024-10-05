@@ -33,8 +33,8 @@
 1. Склонировать проект 'git clone https://github.com/OlesyaEfr/Final-work.git
 2. Установить зависимости
 3. Запустить тесты: 'pytest'- для запуска всех тестов
-                    'pytest Test/test_api.py' - для запуска тестов API (ВАЖНО: перед каждым тестированием нужно обновлять токен! Брать из Девтулс-Куки на сайте)
-                    'pytest Test/test_ui.py' - для запуска тестов UI
+                    'pytest -m api' - для запуска тестов API (ВАЖНО: перед каждым тестированием нужно обновлять токен! Брать из Девтулс-Куки на сайте)
+                    'pytest -m ui' - для запуска тестов UI
 4. Сгенерировать отчет 'allure generate allure-files -o allure-report'
 5. Открыть отчет 'allure open allure-report'
 
